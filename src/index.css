@@ -1,0 +1,19 @@
+.App {
+  display: flex;
+  flex-direction: row;
+}
+
+.editor {
+  background-color: darkgray;
+  width: 50%;
+}
+
+.editor textarea {
+  width: 100%;
+  min-height: 400px;
+}
+
+.preview {
+  background-color: darkseagreen;
+  width: 50%;
+}
