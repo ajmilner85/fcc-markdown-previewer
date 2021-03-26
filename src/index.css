@@ -1,19 +1,20 @@
 .App {
+  margin-top: 100px;
   display: flex;
   flex-direction: row;
 }
 
-.editor {
+.editor-pane {
   background-color: darkgray;
   width: 50%;
 }
 
-.editor textarea {
+.editor-pane textarea {
   width: 100%;
-  min-height: 400px;
+  min-height: 450px;
 }
 
-.preview {
+.preview-pane {
   background-color: darkseagreen;
   width: 50%;
 }

@@ -7,7 +7,7 @@ const initialText = "# Heading Level 1\n\n" +
                     "[link](www.google.com)\n\n" +
                     "`Inline code`\n\n" + 
                     "    Block Code\n\n" +
-                    "-List Item\n\n" +
+                    "- List Item\n- Second List Item\n\n" +
                     "> Blockquote\n\n" +
                     "![Image](image.png)\n\n" +
                     "**Bolded text**"
@@ -21,11 +21,11 @@ const Editor = () => {
 
     return ( 
         <>
-            <div className="editor">
-                <textarea onChange={ handleChange }>{ userInput }</textarea>
+            <div className="editor-pane">
+                <textarea id="editor" onChange={ handleChange }>{ userInput }</textarea>
             </div>
-            <div className="preview">
-                <div dangerouslySetInnerHTML={{ __html: marked( userInput ) }}></div>
+            <div className="preview-pane">
+                <div id="preview" dangerouslySetInnerHTML={{ __html: marked( userInput, {gfm: true, breaks: true} ) }}></div>
             </div>
         </>
      );
